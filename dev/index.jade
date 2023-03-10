@@ -1,0 +1,63 @@
+!!! 5
+html
+    head
+        title Trans&diams;cube
+        link(rel="stylesheet", type="text/css", href="css/main.css")
+    body
+        #container
+            canvas#canvas
+            #ui
+                #levelselect              
+                    .title Level select 
+                    #levels
+                    #menu
+                        .menu Title
+                        .restart Restart
+                        .play Resume
+                #intro
+                    #title Trans<span>cube</span>
+                    #slug a game by <a href="https://github.com/jeroenverfallie">jeroen verfallie</a>
+                    #play Play
+                    #github Github
+
+                #end
+                    #stats
+                        div
+                            span#time 
+                            span.right Seconds
+                        div
+                            span#restarts 
+                            span.right Restarts
+                        div
+                            span#transforms 
+                            span.right Transforms
+                        div
+                            span#deaths 
+                            span.right "Deaths"
+                    #btns
+                        .menu Menu
+                        .retry Restart
+                        .next &gt;&gt; Next level (N) &gt;&gt;              
+            #leveltitle.message.top Loading the loader!
+            #icons-top
+                .left
+                    .menu
+                    .pause
+                    .restart
+                .right
+                    .music
+                    .mute
+            #footer
+                #morphs 
+                    span Spawns a movable block you can stand on.
+                    div
+
+
+        script(type="text/javascript", src="js/soundmanager2-nodebug-jsmin.js")
+        script(type="text/javascript", src="js/jquery-1.10.1.min.js")
+        script(type="text/javascript", src="js/jquery.color-2.1.2.min.js")
+        if debug
+            script(type="text/javascript", src="js/main.js")
+            script(type="text/javascript", src="//localhost:35729/livereload.js")
+        else
+            script(type="text/javascript", src="js/main.min.js")
