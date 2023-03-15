@@ -3,8 +3,7 @@
   "description": "A puzzle platformer",
   "version": "0.2.0",
   "author": {
-    "name": "Chloe Boyer",
-    "name": "Joseph Rublein"
+    "name": "Chloe Boyer & Joseph Rublein"
   },
   "devDependencies": {
     "grunt-contrib-jshint": "~0.7.1",
