@@ -78,5 +78,6 @@
  "tilewidth":16,
  "type":"map",
  "version":"1.10",
- "width":30
+ "width":30,
+ "name":"intro"
 }
