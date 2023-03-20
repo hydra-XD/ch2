@@ -1,4 +1,4 @@
-{ "compressionlevel":-1,
+{ "name":"intro","tileheight":15,"tilewidth":16,"height":14,"width":26,"compressionlevel":-1,
  "height":20,
  "infinite":false,
  "layers":[
