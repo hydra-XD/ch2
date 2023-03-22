@@ -343,7 +343,7 @@ var Game = Class.extend({
 
         var self = this;
 
-        var time = 2.3
+        var time = 2.3;
 
        // var time = ~~(((new Date()).getTime() - this.stats.starttime));
 
