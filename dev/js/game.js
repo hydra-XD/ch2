@@ -343,7 +343,7 @@ var Game = Class.extend({
 
         var self = this;
 
-        var time = ~~(((new Date()).getTime() - this.stats.starttime) / 1000);
+        var time = ~~(((new Date()).getTime() - this.stats.starttime) / 10);
 
         ga('send', 'event', 'finish level', this.currentLevelId, time);
 

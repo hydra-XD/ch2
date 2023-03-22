@@ -32,7 +32,7 @@ var Config = {
     },
 
     physics: {
-        debug: true
+        debug: false
     },
 
     fog: {
