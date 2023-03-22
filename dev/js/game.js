@@ -46,7 +46,7 @@ var Game = Class.extend({
         Input.bind("restart", [Keys.R]);
         Input.bind("nextLevel", [Keys.N, Keys.ENTER]);
         Input.bind("hardReset", [Keys.X]);
-
+        
 
         $('#ui').fadeIn(1000);
         $('#icons-top .right').fadeIn(1000);
@@ -458,8 +458,7 @@ var Game = Class.extend({
             });
         }
 
-        if(Input.isPressed('hardReset')) {
-            var self = this;
+        if(Input.isPressed('hardReset') && !this.waitingForNext) {
             this.stats.restarts++;
             this.loadLevel(this.currentLevelId);
         }
