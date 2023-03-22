@@ -45,7 +45,7 @@ var Game = Class.extend({
         Input.bind("morph", [Keys.E]);
         Input.bind("restart", [Keys.R]);
         Input.bind("nextLevel", [Keys.N, Keys.ENTER]);
-        Input.bind("softlockreset", [Keys.X]);
+        Input.bind("hardReset", [Keys.X]);
 
 
         $('#ui').fadeIn(1000);
@@ -127,6 +127,12 @@ var Game = Class.extend({
                 self.restartLevel();
                 showGame();
             });
+        });
+
+        $('.retry').click(function() {
+            showEnd(false);
+            showGame();
+            self.retryLevel();
         });
 
         $('.retry').click(function() {
@@ -452,9 +458,10 @@ var Game = Class.extend({
             });
         }
 
-        if(Input.isPressed('softlockreset')) {
-            player.hitTime = 1;
-            player.kill(this);
+        if(Input.isPressed('hardReset')) {
+            var self = this;
+            this.stats.restarts++;
+            this.loadLevel(this.currentLevelId);
         }
 
         if(Input.isPressed('nextLevel') && this.waitingForNext) {
