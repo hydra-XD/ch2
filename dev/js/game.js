@@ -343,9 +343,7 @@ var Game = Class.extend({
 
         var self = this;
 
-        var time = 2.3;
-
-       // var time = ~~(((new Date()).getTime() - this.stats.starttime));
+        var time = ~~(((new Date()).getTime() - this.stats.starttime));
 
         ga('send', 'event', 'finish level', this.currentLevelId, time);
 
